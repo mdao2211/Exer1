@@ -1,25 +1,30 @@
-var input = prompt("Please enter your string: ");
+let input = prompt("Please enter your string: ");
 
 // C1
-// var swapCase = function (input) {
-//   var newLetters = "";
-//   for (var i = 0; i < input.length; i++) {
-//     if (input[i] === input[i].toLowerCase()) {
-//       newLetters += input[i].toUpperCase();
-//     } else {
-//       newLetters += input[i].toLowerCase();
-//     }
-//   }
-//   return newLetters;
-// };
+let swapCase = function (input) {
+  var newLetters = "";
+  for (var i = 0; i < input.length; i++) {
+    if (input[i] === input[i].toLowerCase()) {
+      newLetters += input[i].toUpperCase();
+    } else {
+      newLetters += input[i].toLowerCase();
+    }
+  }
+  return newLetters;
+};
+
+let results = swapCase(input);
+
+document.getElementById("exer4").innerHTML = "After: " + results;
+
 // console.log(swapCase(input));
 
 // C2
-var solvedString = input
-  .split("")
-  .map(function (c) {
-    return c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
-  })
-  .join("");
+// var solvedString = input
+//   .split("")
+//   .map(function (c) {
+//     return c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
+//   })
+//   .join("");
 
-console.log(solvedString);
+// console.log(solvedString);
