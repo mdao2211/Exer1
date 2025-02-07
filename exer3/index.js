@@ -1,16 +1,16 @@
-function interpolationSearch(arr, value) {
+function interpolationSearch(arr, target) {
   const length = arr.length - 1;
   let low = 0;
   let high = length;
   let position = -1;
-  while (low <= high && value >= arr[low] && value <= arr[high]) {
+  while (low <= high && target >= arr[low] && target <= arr[high]) {
     position =
       low +
-      Math.floor(((high - low) * (value - arr[low])) / (arr[high] - arr[low]));
-    if (arr[position] === value) {
+      Math.floor(((high - low) * (target - arr[low])) / (arr[high] - arr[low]));
+    if (arr[position] === target) {
       return position;
     }
-    if (arr[position] < value) {
+    if (arr[position] < target) {
       low = position + 1;
     } else {
       high = position - 1;
